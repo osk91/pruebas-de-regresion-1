@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://panamericano.edu.pe/introprin/demo.htm -->
+<html class=" js csstransforms3d"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<style>
+ /* CSS for custom nav controls of Cube Slider 2. Remove if desired */
+
+ul.cubeslider2-navarea{
+list-style: none;
+overflow: hidden;
+}
+ul.cubeslider2-navarea li{
+display: block;
+float: left;
+cursor: pointer;
+padding: 7px;
+margin:right: 5px;
+}
+ul.cubeslider2-navarea li:hover{
+background: lightyellow;
+}
+</style>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="modernizr.custom.13303.js"></script>
+<script type="text/javascript" src="jquery.shockwave.js">
+
+/***********************************************
+* Shockwave 3D slideshow script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+</script> 
+<script type="text/javascript" src="jquery.shockwave.effects.js"></script>
+
+
+<script>
+
+var imagesDataArray = [ //For demos, define a single set of images to be used in all of the demos below
+   {
+      src: 'images/4.jpg',
+   },
+   {
+      src: 'images/2.jpg',
+         },
+   {
+      src: 'images/3.jpg',
+			description: '',
+   },
+   {
+      src: 'images/1.jpg',
+	
+   },
+   {
+      src: 'images/2.jpg',
+			description: '',
+   },
+   {
+      src: 'images/4.jpg',
+			description: '',
+   },
+   {
+      src: 'images/5.jpg',
+			description: '',
+   }
+
+
+];
+
+
+jQuery(function(){
+
+	$('#unhookshow').shockwave(imagesDataArray, {
+	 'slider-type': 'UnhookedSlider',
+   'random-time-to-unhook': 1500, // in ms
+   'free-fall-time': 150, // ms
+	 'autostart-slideshow': true,
+	 'maximum-slideshow-cycles': 2,
+	 'slideshow-delay': 2000,
+	 'duration': 100,
+   'tiles-in-x': 5,
+   'tiles-in-y': 5,
+	 'show-permanent-description': false,
+	 'standard-control-buttons-area': $('#unhookbuttons'),
+	 'viewport-dimension': {width: 350, height: 262}
+	});
+
+
+
+	$('#flipedge').shockwave(imagesDataArray, {
+	 'slider-type': 'FlipEdgeSlider',
+   'tiles-in-x': 7,
+   'tiles-in-y': 1,
+   'fixed-rotation-axis': [1, 0, 0],
+   'controller-default-wave-origin': ['50%', '50%'],
+	 'autostart-slideshow': true
+	});
+
+	$('#cubeslider').shockwave(imagesDataArray, {
+   'slider-type': 'CubeSlider',
+   'rotation-duration': 600,  // in ms
+   'tiles-in-x': 1,
+   'tiles-in-y': 1,
+   'rotation-axis': 'x',
+	 'show-description-onimage': false,
+	 'autostart-slideshow': true
+	});
+
+	$('#cubeslider2').shockwave(imagesDataArray, {
+   'slider-type': 'CubeSlider',
+   'rotation-duration': 600,  // in ms
+   'tiles-in-x': 5,
+   'tiles-in-y': 1,
+   'wave-fixed-origin': [0, 0],
+	 'standard-control-buttons-area': null,
+   'next-slide-button': $('#cubeslider2next'),
+   'previous-slide-button': $('#cubeslider2prev'),
+   'play-pause-slideshow-buttons': $('#cubeslider2playpause')
+	});
+
+})
+
+</script>
+</head>
+<body topmargin="0" leftmargin="0" marginwidth="1" marginheight="0">
+<div id="cubeslider" style="-webkit-perspective: 1000px; height: 252px; width: 493px; position: relative; cursor: pointer;"><div style="position: absolute; width: 493px; height: 252px; left: 0px; top: 0px; -webkit-backface-visibility: hidden; transition: -webkit-transform 600ms; -webkit-transition: -webkit-transform 600ms; -webkit-transform: rotate3d(1, 0, 0, 0rad) translate3d(0px, 0px, 0px); visibility: visible; background-image: url(http://panamericano.edu.pe/introprin/images/5.jpg); background-size: 493px 252px; background-position: 0px 0px;"></div></div>
+<br>
+</body></html>
